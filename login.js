@@ -6,8 +6,8 @@ import {
 const app = createApp({
   setup() {
     const user = ref({
-      username: "sonyt605@gmail.com",
-      password: "Ruby1998__",
+      username: "",
+      password: "",
     });
 
     const login = () => {
@@ -18,7 +18,7 @@ const app = createApp({
         .then((res) => {
           // console.log(res);
           const { token, expired } = res.data;
-          console.log(token, expired);
+          // console.log(token, expired);
           document.cookie = `rubbyToken=${token}; expires=${new Date(expired)};`;
           window.location = "index.html";
         })

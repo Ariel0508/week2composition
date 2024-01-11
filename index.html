@@ -32,25 +32,25 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">產品名稱</th>
-                  <th scope="col">原價</th>
-                  <th scope="col">售價</th>
-                  <th scope="col">是否啟用</th>
-                  <th scope="col">查看細節</th>
+                  <th width="150">產品名稱</th>
+                  <th width="120">原價</th>
+                  <th width="120">售價</th>
+                  <th width="150">是否啟用</th>
+                  <th width="150">查看細節</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="product in products" :key="product.id">
-                  <th scope="row">{{ product.title }}</th>
-                  <td>{{product.origin_price}}</td>
-                  <td>{{product.price}}</td>
-                  <td>
+                  <th width="150">{{ product.title }}</th>
+                  <td width="120">{{product.origin_price}}</td>
+                  <td width="120">{{product.price}}</td>
+                  <td width="150">
                     <span v-if="product.is_enabled" class="text-success"
                       >啟用</span
                     >
                     <span v-else class="text-muted">未啟用</span>
                   </td>
-                  <td>
+                  <td width="150">
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -94,7 +94,7 @@
             </div>
         </div>
         <span v-for="(img, id) in tempProduct.imagesUrl" :key="id">
-         <img :src="img" alt="細圖" class="images me-3">
+         <img :src="img" alt="細圖" class="images m-3">
         </span>
           </div>
         </div>
